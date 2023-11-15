@@ -1,118 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-* {
-    margin:0;
+
+*
+{
     padding:0;
+    margin:0px;
     box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
-    
 }
 body
 {
-    
-    min-height:100vh;
-    background-color: #0c192c;
+    width: 100%;
 }
 .container
 {
-    position:relative;
+    /* color: #fff; */
     width:100%;
-    height:100vh;
-    overflow:hidden;
-}
-.bubbles
-{
-    position:relative;
+    font-family: 'Poppins',sans-serif;
+    height: 100%;
     display: flex;
-}
-.bubbles span
-{
-    position: relative;
-    width:30px;
-    height:30px;
-    background: #4fc3dc;
-    margin:0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44,0 0 50px #4fc3dc,0 0 100px #4fc3dc;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(125s/var(--i));
-}
-.bubbles span:nth-child(even)
-{
-    background: #1b72b9;
-    box-shadow: 0 0 0 10px #0f033644,0 0 50px #23389f,0 0 100px #23389f;
-}
-@keyframes animate
-{
-    0%
-    {
-        transform: translateY(100vh) scale(0.2);
-    }
-    100%
-    {
-        transform: translateY(-10vh) scale(0.7);
-    }
-}
-.main{
-    height:100vh;
-    display: flex;
+    flex-direction: column;
+    background-color: #002b80;
+    padding: 70px;
+
     align-items: center;
-    justify-content: center;
+}
+.gap{
+    margin-bottom: 30px;
 }
 .topic
 {
+    font-size: 60px;
+}
+.heading
+{
     text-align: center;
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 50px;
-    color: aliceblue;
-    /* margin-top: 100px;; */
+    margin: 40px 80px;
 }
-.calculator
+.heading .title
 {
-    position: relative;
-    max-width: 350px;
-    width:100%;
-    padding:20px 20px 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(1, 0, 0, 0.50);
+    font-size: 60px;
 }
-.display
+.heading .sub-title
 {
-    height:80px;
-    width:100%;
-    outline : none;
-    border:none;
-    text-align: right;
-    margin-bottom: 10px;
-    font-size: 35px;
-
+    margin: 40px 70px;
+    font-size: 25px;
 }
-.buttons
+.about,.records
 {
-    display: grid;
-    grid-gap:20px;
-    grid-template-columns: repeat(4,1fr);
+    margin: 50px;
+} 
+ul.ab
+{
+    /* list-style-position: inside; */
+    font-size: 25px;
     
 }
-.buttons button
+.ab li
 {
-    padding:10px;
-    border-radius: 10px;
-    border:none;
+    margin-bottom: 20px;
+}
+.records 
+{
+    text-align: center;
+}
+.rec{
+    font-size: 22px;
+    width:500px;
+    list-style: decimal;
+    text-align: center;
+}
+.rec li
+{
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border:3px solid black;
+    border-collapse: collapse;
+    background-color: gray;
+  }
+table
+{
+    width: 90%;
+    margin: 70px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+}
+th
+{
+    font-size: 25px;
+    padding:50px;
+}
+td
+{
+    text-align: center;
+    padding:20px;
     font-size: 20px;
-    cursor:pointer;
-    background-color: #E5E4E2;
 }
-.buttons button:active
+footer
 {
-    transform: scale(1.05);
+    text-align: center;
+    font-size: 30px;
+    width:100%;
+    background-color: #001a4d;
+    padding: 20px;
 }
-.operator
+@media  (min-width:730px) and (max-width : 1100px){
+.container
 {
-    color:dodgerblue;
+    width: 100%;
 }
-.clear
+table,th,td
 {
-    color:red;
+    font-size: 5px;
+    width: 100px;
+    height: 80px;
+    margin: 0 20px;
+}
+
+th
+{
+    font-size: 25px;
+    padding: -20px;
+}
+td
+{
+    /* width: 20px; */
+    font-size: 12px;
+    padding: 10px;
+}
+}
+@media  (min-width:500px) and (max-width : 730px)
+{
+    .container
+    {
+        width: 150%;
+    }
+    table,th,td
+    {
+        align-items: center;
+        font-size: 5px;
+        width: 100px;
+        height: 80px;
+        margin: auto auto;
+    }
+
+    th
+    {
+        font-size: 25px;
+        padding: -20px;
+    }
+    tr
+    {
+        width: 50px;
+    }
+    td
+    {
+        width: 20px;
+        font-size: 10px;
+        padding: -30px;
+    }
+    footer
+    {
+        width: 150%;
+    }
+    
+}
+@media  (min-width:300px) and (max-width : 500px)
+{
+    .container
+    {
+        width: 200%;
+    }
+    table,th,td
+    {
+        font-size: 10px;
+        width: 100px;
+        height: 80px;
+        margin: 0 60px;
+    }
+    footer
+    {
+        width: 200%;
+    }
+
 }
